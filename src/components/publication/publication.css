@@ -1,0 +1,60 @@
+.publication{
+    font-size: 16px;
+    
+    background-image: linear-gradient(90deg,#822ea8 0%,#d90e90 100%);
+    padding: 1rem;
+    color: white;
+}
+.pub-container{
+    max-width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.right, .left{
+    flex:1; 
+}
+.right > p{
+    text-align: initial;
+    max-width: 80%;
+}
+.early > p{
+    text-align: initial;
+    margin: 0.5rem 0;
+}
+.right > h1,.left > h1{
+    margin-bottom: 1vw;
+}
+
+.early{
+    display: flex;
+    font-size: 1.1rem;
+    text-align: unset;
+}
+.each{
+    flex:2;
+}
+.price{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    flex:1;
+}
+@media screen and (max-width:768px) {
+    .pub-container{
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .right > p{
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+    .price{
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+    }
+}

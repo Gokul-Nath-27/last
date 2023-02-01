@@ -1,0 +1,96 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    background: url("../../assets/headerBg.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main-content {
+    max-width: 60%;
+}
+
+.sponsor {
+    margin-inline: auto;
+    max-width: 80%;
+    text-align: center;
+    font-size: 1.5vw;
+
+}
+
+.title {
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 1.5vw;
+}
+
+.date {
+
+    margin: 0.8vw 0;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.logoo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .logoo img{
+    margin: 1rem;
+    width: 20%; 
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+}
+.dept {
+    position: absolute;
+    width: 60%;
+    font-size: 1.5vw;
+    display: block;
+    text-align: center;
+    bottom: 0;
+    margin: 1.5vw 0 4vw 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .main-content {
+        padding-top: 15vh;
+        max-width: 70%;
+        height: 80vh;
+    }
+
+    .sponsor {
+        margin-bottom: 1rem;
+        font-size: 2vh;
+    }
+
+    .title {
+        font-size: 4vh;
+    }
+
+    .date {
+        font-size: 2vh;
+        margin-top: 1rem;
+
+    }
+
+    .dept {
+        font-size: 2vh;
+        width: 70%;
+        margin: 2vh 0 25vh 0;
+    }
+    .main-content .logoo img{
+        width: 30%;
+    }
+}

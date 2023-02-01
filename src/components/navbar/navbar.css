@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  overflow: hidden;
+}
+
+.navbar-active {
+  background-color: #000000cc;
+  color: #a0a0a0;
+
+  transition: 0.5s;
+}
+
+.container-nav {
+  margin-inline: auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 33%;
+}
+
+.nav-elements ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  gap: 2rem;
+  z-index: 10000000;
+
+}
+
+.nav-elements ul li {
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-elements ul li>* {
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  color: #a0a0a0;
+  text-decoration: none;
+}
+
+.nav-elements ul li>*:hover,
+.nav-elements ul li>*.active {
+  color: white;
+}
+
+.nav-elements ul li>*::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+
+.nav-elements ul li>*:hover:after,
+.nav-elements ul li>*.active::after {
+  width: 100%;
+  transition: all 1s;
+}
+
+#mobile {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 90%;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: var(--navHeight);
+    right: -270px;
+    width: 240px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 40px 6px rgba(34, 17, 17, 0.1);
+    padding: 10% 0 0 6%;
+    transition: 1s;
+  }
+
+  .nav-elements ul.active {
+    right: 0;
+  }
+
+  .nav-elements ul li>*,
+  .nav-elements ul li>*:hover,
+  .nav-elements ul li>*.active {
+    color: #000;
+  }
+
+  #mobile {
+    display: block;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobile>* {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .container {
+    padding: .4rem 1rem 0 .8rem;
+  }
+}

@@ -1,0 +1,28 @@
+.about {
+    width: 100%;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    color: white;
+
+}
+
+.about-flex {
+    max-width: 80%;
+    display: flex;
+    gap: 2rem;
+    margin-inline: auto;
+    padding: 2rem 0;
+    font-size: 17px;
+
+}
+.about-flex h1{
+    margin: 1rem 0;
+}
+
+.item {
+    flex: 1 0 0;
+}
+@media screen and (max-width:768px) {
+    .about-flex {
+        flex-direction: column;
+    }
+}
